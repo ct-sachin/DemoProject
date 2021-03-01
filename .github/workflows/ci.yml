@@ -27,5 +27,9 @@ jobs:
     - name: Install JS dependencies
       run: npm install
 
-    - name: Test
+    - name: EsLint Checks
       run: npm run lint
+    
+    - name: Testcase Checks
+      run: npm run test
+    
