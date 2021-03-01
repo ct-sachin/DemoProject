@@ -23,6 +23,11 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import { Button } from './src/components/Button/Button';
+
+const onPress = () => {
+  console.log('Hello Button')
+};
 
 const App: () => React$Node = () => {
   return (
@@ -46,6 +51,14 @@ const App: () => React$Node = () => {
                 Edit <Text style={styles.highlight}>App.js</Text> to change this
                 screen and then come back to see your edits.
               </Text>
+            </View>
+            <View>
+            <Button
+             onPress={() => onPress()}
+              block={false}
+              uppercase={false}
+              label="Apply"
+            />
             </View>
             {/* <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>See Your Changes</Text>
