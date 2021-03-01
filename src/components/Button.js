@@ -12,7 +12,7 @@ const defaultstyle = StyleSheet.create({
   container: {
     margin: 20,
     textAlign: 'center',
-    backgroundColor: 'orange',
+    backgroundColor: 'yellow',
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 5,
@@ -28,7 +28,7 @@ const defaultstyle = StyleSheet.create({
     width: 100,
   },
   text: {
-    color: 'white',
+    color: 'red',
     fontSize: 16,
     lineHeight: 44,
     fontFamily: '700',
@@ -62,6 +62,7 @@ export const Button = ({title, style, onPress, type}) => {
   const styles = type === 'outline' ? outlineStyles : defaultstyle;
   return (
     <TouchableOpacity style={[styles.container, style]} onPress={onPress}>
+      <Text style={styles.text}>{title}</Text>
       <Text style={styles.text}>{title}</Text>
       <Text style={styles.text}>{title}</Text>
     </TouchableOpacity>
