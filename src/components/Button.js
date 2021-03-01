@@ -24,7 +24,7 @@ const defaultstyle = StyleSheet.create({
     shadowOpacity: 0.23,
     shadowRadius: 2,
     elevation: 1,
-    height: 54,
+    minHeight: 54,
     width: 100,
   },
   text: {
@@ -62,6 +62,7 @@ export const Button = ({title, style, onPress, type}) => {
   const styles = type === 'outline' ? outlineStyles : defaultstyle;
   return (
     <TouchableOpacity style={[styles.container, style]} onPress={onPress}>
+      <Text style={styles.text}>{title}</Text>
       <Text style={styles.text}>{title}</Text>
     </TouchableOpacity>
   );
