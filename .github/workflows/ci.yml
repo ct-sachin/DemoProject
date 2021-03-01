@@ -3,10 +3,10 @@ name: CI
 on:
   # Trigger the workflow on push or pull request,
   # but only for the master branch - Check
-  push:
+  pull_request:
     branches:
       - master
-  pull_request:
+  push:
     branches:
       - master
 
@@ -17,13 +17,13 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
     
-    # - name: Setup-Node
-    #   uses: actions/setup-node@v1
+    - name: Setup-Node
+      uses: actions/setup-node@v1
 
     # # - uses: c-hive/gha-yarn-cache@v1
 
-    # - name: Install JS dependencies
-    #   run: npm install
+    - name: Install JS dependencies
+      run: npm install
 
     - name: Test
       run: npm run lint
