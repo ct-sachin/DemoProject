@@ -16,8 +16,8 @@ jobs:
 
     # - uses: c-hive/gha-yarn-cache@v1
 
-    # - name: Install JS dependencies
-    #   run: npm install
+    - name: Install JS dependencies
+      run: npm install
 
     - name: Test
       run: npm run lint
