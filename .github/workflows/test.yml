@@ -1,0 +1,22 @@
+name: Test Feature
+on: 
+  push:
+    branches:
+      - '*'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run a one-line script
+      run: echo "Only on featuer branches"
+    - name: Run a multi-line script
+      run: |
+        echo "Only on feature branches1"
+        echo "Only on feature branches2" 
+    - name: Move to Android Folder
+      run: |
+        cd android
+    - name: Gradle Release
+      run: |
+        ./gradlew assembleRelease
