@@ -1,5 +1,5 @@
 name: Test Feature
-on: custom
+on: workflow_dispatch
 
 jobs:
   build:
